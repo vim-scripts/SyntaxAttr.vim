@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=383
+
+Displays the syntax highlighting attributes of the character under the cursor; including syntax group (and what it's linked to, if linked), foreground/background colors (name and numeric equivallent), bold, underline, etc.
+
+Example output:
+
+[WIth cursor on a function name in a vim script]
+     group: vimUserFuncName guifg=DarkCyan(#008b8b) gui=bold
+
+[With cursor on "function" keyword in vim script]
+     group: vimFuncKey->Statement guifg=Brown(#a52a2a) gui=bold
+
+[WIth cursor on "let" keyword in vim script]
+     group: vimLet->Statement guifg=Brown(#a52a2a) gui=bold
+
+This can be helpfull both developing syntax files, and for determining what something is (according to the syntax rules), since the group names used in syntax files are usually well-named.
+
+Recommended use with a mapping such as:
+
+  map -a	:call SyntaxAttr()<CR>
