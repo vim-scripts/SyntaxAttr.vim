@@ -62,4 +62,6 @@ function! SyntaxAttr()
      endif
      echo message
      echohl None
+     
+     return message
 endfunction
