@@ -18,3 +18,7 @@ This can be helpfull both developing syntax files, and for determining what some
 Recommended use with a mapping such as:
 
   map -a	:call SyntaxAttr()<CR>
+  
+If you want to copy the syntax information into register "a" for using in your own syntax files or colorschemes, you could map as follows:
+
+noremap <S-C-M-F12> :let @a = SyntaxAttr()<CR>
